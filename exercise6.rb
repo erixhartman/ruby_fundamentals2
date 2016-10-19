@@ -9,7 +9,7 @@ def asterisk(list)
   puts  "* " + "#{item}"
   end
 end
-asterisk(grocery_list)
+asterisk (grocery_list)
 
 # Q2 Check the number of items on your list using count
 puts "Your list has #{grocery_list.count.to_s} items"
@@ -25,9 +25,11 @@ end
 puts "The 2nd item on the list is #{grocery_list[1]}"
 
 #Q5 sort the array, but make sure
-asterisk(grocery_list).sort
+puts "This is Q5"
+asterisk (grocery_list).sort
 
 #Q6 Delete Salmon from your list using .delete("salmon")
 #Show the final array one last time by calling it
+puts "This is Q6"
 grocery_list.delete("salmon")
-asterisk(grocery_list)
+asterisk (grocery_list)
