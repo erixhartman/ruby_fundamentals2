@@ -1,12 +1,15 @@
-grocery_list = ["carrots", "toilet paper", "apples", "salmon",]
+grocery_list = ["carrots", "toilet paper", "apples", "salmon"]
 #Q1 Add rice to the list using a shovel
 grocery_list << "rice"
 
 # Q1 Use an each statement to precede every item with "*"
 # Going to make it into it's own array to use in Q5
-grocery_list.each do |item|
-  puts  "* " + item
+def asterisk(list)
+  list.each do |item|
+  puts  "* " + "#{item}"
   end
+end
+asterisk(grocery_list)
 
 # Q2 Check the number of items on your list using count
 puts "Your list has #{grocery_list.count.to_s} items"
@@ -22,7 +25,9 @@ end
 puts "The 2nd item on the list is #{grocery_list[1]}"
 
 #Q5 sort the array, but make sure
-org_list = grocery_list.sort
-org_list.each do |item|
-  puts  "* " + item
-  end
+asterisk(grocery_list).sort
+
+#Q6 Delete Salmon from your list using .delete("salmon")
+#Show the final array one last time by calling it
+grocery_list.delete("salmon")
+asterisk(grocery_list)
